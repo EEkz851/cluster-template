@@ -9,5 +9,12 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose
 sudo apt-get install -y httping
 sudo apt-get install -y jq
 
+#Installing the LAMP parts
+sudo apt install apache2 libapache2-mod-fastcgi 
+sudo apt install python-software-properties
+sudo add-apt-repository ppa:ondrej/php
+
+sudo a2enmod actions fastcgi alias proxy_fcgi
+
 # the username needs to be changed
 sudo usermod -aG docker lngo
